@@ -1,0 +1,24 @@
+1. What do you think it will output when run?
+- I expect for a to print 100 times, b to print 100 times, then c to print 100 times.
+
+2. Does the output match your expectations? 
+- No! The join methods are used after all three threads begin executing causing them to overlap.
+
+3. Run the program several more times.  What do you notice?
+- The order that the letters are printing are unpredictable because all three threads are running concurrent. Execution of the threads are jumping back and forth between one another.
+
+4. When execution reaches LINE A, how many threads are running?
+- 4 threads are running when execution reaches LINE A. The cout is in it's own thread then t_1, t_2, t_3 are in their own thread.
+
+5. Comment out one of the join() lines, recompile, and rerun the program.  What happened? 
+- The program fails to run due to SIGABRT - Abort (abnormal termination) signal.
+
+6. Why? 
+- When we reach the end of the program while we are still executing a thread.
+
+7. Run ls in the ./build directory.  What are those new files?  Uncomment the line.
+- The new files are from the core being dumped.
+
+8. Assuming that we don’t care about the exact ordering of the letters, are there any problems with this code?
+- No
+

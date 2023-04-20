@@ -16,8 +16,11 @@ TEST_CASE("letters example", "")
 {
   cout << "this will print before any letters" << endl;
   std::thread t_1(print_letter, 'a', 100);
+  //t_1.join();
   std::thread t_2(print_letter, 'b', 100);
+  //t_2.join();
   std::thread t_3(print_letter, 'c', 100);
+  //t_3.join();
   // LINE A
   t_1.join();
   t_2.join();
