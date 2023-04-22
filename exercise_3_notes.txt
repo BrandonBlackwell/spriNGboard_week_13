@@ -1,0 +1,9 @@
+1. Are there any concurrency issues in this code?
+- Yes, the threads will try to run concurrently but, because of the lockguards on the mutexes both threads will end up in a 
+deadlock. None of the mutexes will be released from the ownership of the lockguards.
+
+2. What happens?  
+- A deadlock has occured.
+
+3. Why?
+- Because of the ordering of the lockguards.
