@@ -1,0 +1,26 @@
+1. Why are counter and counter_mutex being passed by reference to the threads?
+- We want the threads to manipulate the original counter variable.
+
+2. How long (approximately) will it take the test to run? 
+- 1 second
+
+3. Will it pass?
+- No
+
+4. Do the outputs and times match your previous expectations? 
+- My expectation for the counter was: counter > 3000. My expectation for the time was: time >= 1.0sec. 
+
+5. Does the test pass? 
+- Yes, all tests pass. 
+
+6. How long does it take to run?
+- 3.295s
+
+7. Does the test pass?
+- Yes, test still passes.
+
+8. How long does it take to run?
+- About 1 - 1.1 secs
+
+9. What does this say about which code should be inside critical sections?
+- Using code inside critical sections makes a drastic difference in efficiency. It can really slow your program down if done incorrectly. 
