@@ -5,7 +5,7 @@
 - No! The join methods are used after all three threads begin executing causing them to overlap.
 
 3. Run the program several more times.  What do you notice?
-- The order that the letters are printing are unpredictable because all three threads are running concurrent. Execution of the threads are jumping back and forth between one another.
+- The order that the letters are printing are unpredictable because all three threads are running concurrently. Execution of the threads are jumping back and forth between one another.
 
 4. When execution reaches LINE A, how many threads are running?
 - 4 threads are running when execution reaches LINE A. The cout is in it's own thread then t_1, t_2, t_3 are in their own thread.
